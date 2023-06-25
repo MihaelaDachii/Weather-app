@@ -1,0 +1,204 @@
+* {
+    margin: 0;      
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Stilizam elementul body - centrat pe ecran, cu o imagine de fundal si alte proprietati de aspect */
+
+body {
+  display: flex; /* Utilizeaza flexbox pentru a alinia elementele in centru pe orizontala si verticala */
+  justify-content: center; /* Aliniaza elementele pe orizontala in centru */
+  align-items: center; /* Aliniaza elementele pe verticala an centru */
+  height: 100vh; /* Seteaza inaltimea corpului (body) la 100% din inaltimea vizibila a ferestrei  */
+  margin: 0; 
+  font-family: 'Open Sans', sans-serif; 
+  background: #222; 
+  background-image: url('https://source.unsplash.com/1600x900/?landscape'); 
+  font-size: 120%; /* Seteaza dimensiunea fontului pentru textul din corp la 120% */
+}
+
+
+/* Stilizam bara de navigatie - cu culori, aliniere si alte proprietati specifice */
+
+
+.main-nav {
+    color: white;
+    background-color: rgb(79, 53, 139);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+/* Stilizam elementul cu clasa "logo" - cu dimensiunea si grosimea fontului */
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+/* Stilizam lista de link-uri de navigare - cu aliniere ai grosimea fontului */
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-weight:bolder;
+  }
+
+/* Stilizam link-urile din lista de navigare - cu culori, aliniere si spatiere */
+
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 16px;
+  }
+
+/* Stilizam link-urile din lista de navigare la interactiunea de hover - cu culori de fundal si tranzitie */
+
+  .nav-links li a:hover {
+    color: rgb(131, 78, 255);
+    background-color: rgb(241, 241, 241);
+    transition: backgound-color 0.5s ease;
+    border-radius: 50px;
+  }
+
+/* Ascundem elementul cu clasa "nav-toggle" */
+
+  .nav-toggle {
+    display: none;
+  }
+
+/* Stilizam elementul cu clasa "nav-toggle" - cu afisare si proprietati de aspect */
+
+  .nav-toggle {
+    display: block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+/* Stilizam bara din interiorul elementului cu clasa "nav-toggle" - cu dimensiuni si culori */
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .logo__img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+
+/* Stilizam elementul cu clasa "card" - cu culori, padding si alti parametri specifici */
+
+.card {
+  background: #000000d0; /* Seteaza culoarea de fundal a elementului cu clasa "card" la negru cu o opacitate de 0.82 */
+  color: white; 
+  padding: 2em; /* Adauga un spatiu de 2 ori dimensiunea fontului in jurul continutului elementului */
+  border-radius: 30px; 
+  width: 100%; /* Seteaza latimea elementului la 100% din latimea parintelui */
+  max-width: 420px; /* Seteaza latimea maxima a elementului la 420 de pixeli */
+  margin: 1em; /* Adauga un spatiu de o dimensiune a fontului in jurul elementului */
+}
+
+/* Stilizam elementul cu clasa "search" - cu afisare flexibila si aliniere */
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Stilizam butonul - cu margini, dimensiuni, culori si alte efecte la interactiune */
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #8685852b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+/* Stilizam bara de cautare de tip input - cu borduri, dimensiuni, culori si altele */
+input.search-bar {
+  border: none; /* Elimina stilul de bordura a elementului input cu clasa "search-bar" */
+  outline: none; /* Elimina stilul de contur a elementului input cu clasa "search-bar" */
+  padding: 0.4em 1em; /* Adauga un spatiu de 0.4 dimensiuni a fontului in partea de sus si de jos, si 1 dimensiune a fontului in stanga si dreapta a continutului elementului */
+  border-radius: 24px; 
+  background: #7c7c7c2b; 
+  color: white; 
+  font-family: inherit; /* Foloseste aceeasi familie de fonturi ca si parintele */
+  font-size: 105%; /* Seteaza dimensiunea fontului la 105% din dimensiunea fontului implicit */
+  width: calc(100% - 100px); /* Seteaza latimea elementului la 100% din latimea parintelui minus 100 de pixeli */
+}
+
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+/* Stilizam titlul h1 - cu margini */
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+/* Stilizam elementul cu clasa "flex" - cu afisare flexibila si aliniere */
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* Stilizam elementul cu clasa "description" - cu transformarea textului in majuscula si margini */
+
+.description {
+  text-transform: capitalize;  
+  margin-left: 8px;
+}
+
+/* Stilizam elementul cu clasa "weather loading" - cu vizibilitate ascunsa si alti parametri specifici */
+
+.weather.loading {
+  visibility: hidden;    /* Face elementul cu clasa "weather loading" invizibil, dar menține spațiul ocupat în fluxul de conținut */
+  max-height: 20px;
+  position: relative;
+}
+
+/* Stilizam elementul cu clasa "weather loading" dupa pseudo-elementul "after" - cu vizibilitate vizibila si alti parametri specifici */
+
+.weather.loading:after {
+  visibility: visible; /* Face pseudo-elementul ::after vizibil */
+  content: "Loading..."; /* Adauga continutul "Loading..." in pseudo-elementul ::after */
+  color: white; 
+  position: absolute; 
+  top: 0; 
+  left: 20px; 
+}
+
+
+
+
+
+
